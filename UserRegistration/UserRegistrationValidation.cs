@@ -13,6 +13,8 @@ namespace UserRegistration
         private static string Regex_LASTNAME = "^[A-Z][a-z]{2}$";
         private static string Regex_EMAIL = "^[a-zA-Z0-9]+([.][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$";
         private static string Regex_MOBILENUMBER = "^[1-9]{1,3}[][1-9][0-9]{9}$";
+        private static string Regex_PASSWORD = "^[a-zA-Z0-9-+_!@#$%^&*.,?]{8,}$";
+
 
         //method to test Firstname
         public bool ValidateFirstName(string firstName)
@@ -36,6 +38,12 @@ namespace UserRegistration
         public bool ValidateMobileNumber(string mobilenumber)
         {
             return Regex.IsMatch(mobilenumber, Regex_MOBILENUMBER);
+
+        }
+        //method to validate password for minimum 8 char
+        public bool ValidatePassword(string password)
+        {
+            return Regex.IsMatch(password, Regex_PASSWORD);
 
         }
         //to print result
