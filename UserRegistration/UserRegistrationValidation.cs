@@ -15,7 +15,8 @@ namespace UserRegistration
         private static string Regex_MOBILENUMBER = "^[1-9]{1,3}[][1-9][0-9]{9}$";
         // private static string Regex_PASSWORD = "^[a-zA-Z0-9-+_!@#$%^&*.,?]{8,}$";
         // private static string Regex_PASSWORD = "^(?=.*[A-Z])[A-Za-z0-9!@#$%^&*]{8,}$";//should have at least one upper case
-        private static string Regex_PASSWORD = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9-+_!@#$%^&*.,?]{8,}$";//should have one numaric number
+        //private static string Regex_PASSWORD = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9-+_!@#$%^&*.,?]{8,}$";//should have one numaric number
+        private static string Regex_PASSWORD = "^(?=.*[0-9])(?=.*[A-Z])(?=[^!@#$%&*+-.]*[!@#$%&*+-.][^!@#$%&*+-.]*$)[\\S]{8,}$";
 
         //method to test Firstname
         public bool ValidateFirstName(string firstName)
