@@ -35,6 +35,13 @@ namespace UserRegistration
             validate.PrintResult(emailResult);
 
             Console.WriteLine("--------------");
+
+            Console.WriteLine("Enter Mobile Number:");
+            string mobileNumber = Console.ReadLine();
+            bool mobileNumberResult = validate.ValidateMobileNumber(mobileNumber);
+            validate.PrintResult(emailResult);
+
+            Console.WriteLine("--------------");
             Console.ReadLine();
         }
     }
