@@ -49,6 +49,16 @@ namespace UserRegistration
             validate.PrintResult(passwordResult);
 
             Console.WriteLine("--------------");
+
+
+            Console.WriteLine("Checking for sample emails:");
+            foreach (string mail in validate.GetList())
+            {
+                Console.WriteLine(mail + ":");
+                validate.PrintResult(validate.ValidateEmail2(mail));
+            }
+
+            Console.WriteLine("--------------");
             Console.ReadLine();
         }
     }
