@@ -21,6 +21,13 @@ namespace UserRegistration
             validate.PrintResult(fNameResult);
 
             Console.WriteLine("--------------");
+
+            Console.WriteLine("Enter Last Name:");
+            string lastName = Console.ReadLine();
+            bool lNameResult = validate.ValidateLasttName(lastName);
+            validate.PrintResult(lNameResult);
+
+            Console.WriteLine("--------------");
             Console.ReadLine();
         }
     }

@@ -10,10 +10,17 @@ namespace UserRegistration
      class UserRegistrationValidation
     {
         private static string Regex_FIRSTNAME = "^[A-Z][a-z]{2}$";
-        //method to set Firstname
+        private static string Regex_LASTNAME = "^[A-Z][a-z]{2}$";
+        //method to test Firstname
         public bool ValidateFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, Regex_FIRSTNAME);
+
+        }
+        //method to test LastNmae
+        public bool ValidateLasttName(string lastName)
+        {
+            return Regex.IsMatch(lastName, Regex_LASTNAME);
 
         }
         //to print result
