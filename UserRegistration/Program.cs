@@ -28,6 +28,13 @@ namespace UserRegistration
             validate.PrintResult(lNameResult);
 
             Console.WriteLine("--------------");
+
+            Console.WriteLine("Enter Email id:");
+            string email = Console.ReadLine();
+            bool emailResult = validate.ValidateEmail(email);
+            validate.PrintResult(emailResult);
+
+            Console.WriteLine("--------------");
             Console.ReadLine();
         }
     }
